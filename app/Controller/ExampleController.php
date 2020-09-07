@@ -18,7 +18,8 @@ class ExampleController {
    */
   public function index()
   {
-    return $this->view('example.index');
+    echo "Index Page";
+    // return $this->view('example.index');
   }
 
   /**
@@ -28,7 +29,8 @@ class ExampleController {
    */
   public function create()
   {
-    return $this->view('example.create');
+    echo "Create Page";
+    // return $this->view('example.create');
   }
 
   /**
@@ -38,7 +40,11 @@ class ExampleController {
    */
   public function show()
   {
-    return $this->view('example.show');
+    $arguments = func_get_args()[0];
+    $id = $arguments[0];
+
+    echo "Show $id";
+    // return $this->view('example.show');
   }
 
   /**
@@ -48,7 +54,7 @@ class ExampleController {
    */
   public function store()
   {
-    //
+    echo "Store Page";
   }
 
   /**
@@ -58,7 +64,10 @@ class ExampleController {
    */
   public function edit()
   {
-    return $this->view('example.edit');
+    $arguments = func_get_args()[0];
+    $id = $arguments[0];
+
+    echo "Edit $id";
   }
 
   /**
@@ -68,7 +77,10 @@ class ExampleController {
    */
   public function update()
   {
-    //
+    $arguments = func_get_args()[0];
+    $id = $arguments[0];
+
+    echo "Update $id";
   }
 
   /**
@@ -78,6 +90,9 @@ class ExampleController {
    */
   public function destroy()
   {
-    //
+    $arguments = func_get_args()[0];
+    $id = $arguments[0];
+
+    echo "Destroy $id";
   }
 }

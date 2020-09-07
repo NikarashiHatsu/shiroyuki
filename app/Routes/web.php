@@ -11,8 +11,8 @@ $route = new Route;
 // Examples ===================================================================
 $route->get('/', 'ExampleController@index');
 $route->get('/create', 'ExampleController@create');
-$route->get('/show', 'ExampleController@show');
 $route->post('/store', 'ExampleController@store');
-$route->get('/edit', 'ExampleController@edit');
-$route->put('/update', 'ExampleController@update');
-$route->delete('/destroy', 'ExampleController@destroy');
+$route->get('/{id}/detail', 'ExampleController@show');
+$route->get('/{id}/edit', 'ExampleController@edit');
+$route->put('/{id}/update', 'ExampleController@update');
+$route->delete('/{id}/destroy', 'ExampleController@delete');
